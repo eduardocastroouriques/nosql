@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "89c9ac56-88c2-4a4a-a5da-98fac52de660",
+		"name": "Cart Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "cart",
+			"item": [
+				{
+					"name": "localhost:8080/cart/{user_id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/cart/1233",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cart",
+								"1233"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/cart/{user_id}",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\" : 1233\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/cart/123",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cart",
+								"123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/cart/{user_id}/products",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n\t{\n\t\t\"userId\" : 1233,\n\t\t\"descricao\" : \"Televisao 29 polegadas\"\n\t},\n\t{\n\t\t\"userId\" : 1233,\n\t\t\"descricao\" : \"Bicicleta Aro 26\"\n\t}\n]"
+						},
+						"url": {
+							"raw": "localhost:8080/cart/1233/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cart",
+								"1233",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/cart/{{user_id}}/products/{{id}}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/cart/{{user_id}}/products/{{id}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cart",
+								"{{user_id}}",
+								"products",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/cart/{{id}}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/cart/{{id}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cart",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
