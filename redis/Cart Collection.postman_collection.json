@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "89c9ac56-88c2-4a4a-a5da-98fac52de660",
+		"_postman_id": "00e92772-f1b9-4157-9d2e-f7b7e1e4d987",
 		"name": "Cart Collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -9,7 +9,66 @@
 			"name": "cart",
 			"item": [
 				{
-					"name": "localhost:8080/cart/{user_id}",
+					"name": "cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product\": [\n        {\n            \"description\": \"TV 39\",\n            \"category\": [\n                {\n                    \"description\": \"Electronic\"\n                },\n                {\n                    \"description\": \"TV\"\n                }\n            ]\n        },\n        {\n            \"description\": \"TV 49\",\n            \"category\": [\n                {\n                    \"description\": \"Electronic\"\n                },\n                {\n                    \"description\": \"TV\"\n                }\n            ]\n        },\n        {\n            \"description\": \"Iphone 7\",\n            \"category\": [\n                {\n                    \"description\": \"Electronic\"\n                },\n                {\n                    \"description\": \"Mobile\"\n                }\n            ]\n        },\n        {\n            \"description\": \"Samsung S10\",\n            \"category\": [\n                {\n                    \"description\": \"Electronic\"\n                },\n                {\n                    \"description\": \"Mobile\"\n                }\n            ]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/cart",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cart{id}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product\": [\n        {\n            \"description\": \"TV 39\",\n            \"category\": [\n                {\n                    \"description\": \"Electronic\"\n                },\n                {\n                    \"description\": \"TV\"\n                }\n            ]\n        },\n        {\n            \"description\": \"TV 49\",\n            \"category\": [\n                {\n                    \"description\": \"Electronic\"\n                },\n                {\n                    \"description\": \"TV\"\n                }\n            ]\n        },\n        {\n            \"description\": \"Iphone 9\",\n            \"category\": [\n                {\n                    \"description\": \"Electronic\"\n                },\n                {\n                    \"description\": \"Mobile\"\n                }\n            ]\n        },\n        {\n            \"description\": \"Samsung S9\",\n            \"category\": [\n                {\n                    \"description\": \"Electronic\"\n                },\n                {\n                    \"description\": \"Mobile\"\n                }\n            ]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/cart/7ed6a101-4edf-432a-bba5-b4c42cbbc817",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cart",
+								"7ed6a101-4edf-432a-bba5-b4c42cbbc817"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cart{id}",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -18,123 +77,14 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "localhost:8080/cart/1233",
+							"raw": "localhost:8080/cart/7ed6a101-4edf-432a-bba5-b4c42cbbc817",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
 								"cart",
-								"1233"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8080/cart/{user_id}",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"userId\" : 1233\n}"
-						},
-						"url": {
-							"raw": "localhost:8080/cart/123",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"cart",
-								"123"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8080/cart/{user_id}/products",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "[\n\t{\n\t\t\"userId\" : 1233,\n\t\t\"descricao\" : \"Televisao 29 polegadas\"\n\t},\n\t{\n\t\t\"userId\" : 1233,\n\t\t\"descricao\" : \"Bicicleta Aro 26\"\n\t}\n]"
-						},
-						"url": {
-							"raw": "localhost:8080/cart/1233/products",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"cart",
-								"1233",
-								"products"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8080/cart/{{user_id}}/products/{{id}}",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "localhost:8080/cart/{{user_id}}/products/{{id}}",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"cart",
-								"{{user_id}}",
-								"products",
-								"{{id}}"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8080/cart/{{id}}",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "localhost:8080/cart/{{id}}",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"cart",
-								"{{id}}"
+								"7ed6a101-4edf-432a-bba5-b4c42cbbc817"
 							]
 						}
 					},

@@ -7,6 +7,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CartRepository extends CrudRepository<Cart, String> {
 
-    Cart getByUserId(Integer userId);
-    void deleteByUserId(Integer userId);
 }
