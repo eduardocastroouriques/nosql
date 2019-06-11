@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 public class CartController {
 
@@ -53,6 +55,22 @@ public class CartController {
 
     }
 
+    @GetMapping("/cart")
+    public ResponseEntity<Object> getAll() {
+
+        List<Cart> cart = null;
+
+        try {
+
+            cart = this.cartService.getAll();
+
+        }catch (Exception e){
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+
+        return ResponseEntity.status(HttpStatus.OK).body(cart);
+
+    }
     @PutMapping
     public ResponseEntity<Object> updateCart(@RequestBody Cart cart) {
 

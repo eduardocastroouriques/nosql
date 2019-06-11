@@ -5,6 +5,8 @@ import com.ouriques.redis.repository.CartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CartService {
 
@@ -25,5 +27,9 @@ public class CartService {
 
     public Cart getById(String id) throws Exception {
         return cartRepository.findOne(id);
+    }
+
+    public List<Cart> getAll() {
+        return (List<Cart>) cartRepository.findAll();
     }
 }

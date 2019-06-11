@@ -38,7 +38,7 @@
 					"response": []
 				},
 				{
-					"name": "cart{id}",
+					"name": "cart",
 					"request": {
 						"method": "PUT",
 						"header": [
@@ -51,24 +51,23 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"product\": [\n        {\n            \"description\": \"TV 39\",\n            \"category\": [\n                {\n                    \"description\": \"Electronic\"\n                },\n                {\n                    \"description\": \"TV\"\n                }\n            ]\n        },\n        {\n            \"description\": \"TV 49\",\n            \"category\": [\n                {\n                    \"description\": \"Electronic\"\n                },\n                {\n                    \"description\": \"TV\"\n                }\n            ]\n        },\n        {\n            \"description\": \"Iphone 9\",\n            \"category\": [\n                {\n                    \"description\": \"Electronic\"\n                },\n                {\n                    \"description\": \"Mobile\"\n                }\n            ]\n        },\n        {\n            \"description\": \"Samsung S9\",\n            \"category\": [\n                {\n                    \"description\": \"Electronic\"\n                },\n                {\n                    \"description\": \"Mobile\"\n                }\n            ]\n        }\n    ]\n}"
+							"raw": "{\n    \"id\": 6,\n    \"product\": [\n        {\n            \"id\": 10,\n            \"description\": \"TV 39\",\n            \"category\": [\n                {\n                    \"id\": 19,\n                    \"description\": \"Electronic\"\n                },\n                {\n                    \"id\": 20,\n                    \"description\": \"TV\"\n                }\n            ]\n        },\n        {\n            \"id\": 11,\n            \"description\": \"TV 49\",\n            \"category\": [\n                {\n                    \"id\": 21,\n                    \"description\": \"Electronic\"\n                },\n                {\n                    \"id\": 22,\n                    \"description\": \"TV\"\n                }\n            ]\n        },\n        {\n            \"id\": 12,\n            \"description\": \"Iphone 7\",\n            \"category\": [\n                {\n                    \"id\": 23,\n                    \"description\": \"Electronic\"\n                },\n                {\n                    \"id\": 24,\n                    \"description\": \"Mobile\"\n                }\n            ]\n        },\n        {\n            \"id\": 13,\n            \"description\": \"Samsung S10\",\n            \"category\": [\n                {\n                    \"id\": 25,\n                    \"description\": \"Electronic\"\n                },\n                {\n                    \"id\": 26,\n                    \"description\": \"Mobile\"\n                }\n            ]\n        }\n    ]\n}"
 						},
 						"url": {
-							"raw": "localhost:8080/cart/7ed6a101-4edf-432a-bba5-b4c42cbbc817",
+							"raw": "localhost:8080/cart",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"cart",
-								"7ed6a101-4edf-432a-bba5-b4c42cbbc817"
+								"cart"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "cart{id}",
+					"name": "cart/{id}",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -77,14 +76,36 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "localhost:8080/cart/7ed6a101-4edf-432a-bba5-b4c42cbbc817",
+							"raw": "localhost:8080/cart/5",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
 								"cart",
-								"7ed6a101-4edf-432a-bba5-b4c42cbbc817"
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/cart",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cart"
 							]
 						}
 					},
