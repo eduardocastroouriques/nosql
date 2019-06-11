@@ -1,0 +1,3 @@
+com/ouriques/redis/repository/CartRepository.class
+com/ouriques/redis/RedisApplication.class
+com/ouriques/redis/service/CartService.class

@@ -1,0 +1,11 @@
+/home/eduardo-ouriques/Documents/git_repository/nosql/redis/src/main/java/com/ouriques/redis/repository/CartRepository.java
+/home/eduardo-ouriques/Documents/git_repository/nosql/redis/src/main/java/com/ouriques/redis/domain/Product.java
+/home/eduardo-ouriques/Documents/git_repository/nosql/redis/src/main/java/com/ouriques/redis/repository/ProductRepository.java
+/home/eduardo-ouriques/Documents/git_repository/nosql/redis/src/main/java/com/ouriques/redis/builder/CartBuilder.java
+/home/eduardo-ouriques/Documents/git_repository/nosql/redis/src/main/java/com/ouriques/redis/service/CartService.java
+/home/eduardo-ouriques/Documents/git_repository/nosql/redis/src/main/java/com/ouriques/redis/RedisApplication.java
+/home/eduardo-ouriques/Documents/git_repository/nosql/redis/src/main/java/com/ouriques/redis/config/SwaggerConfig.java
+/home/eduardo-ouriques/Documents/git_repository/nosql/redis/src/main/java/com/ouriques/redis/service/ProductService.java
+/home/eduardo-ouriques/Documents/git_repository/nosql/redis/src/main/java/com/ouriques/redis/domain/Cart.java
+/home/eduardo-ouriques/Documents/git_repository/nosql/redis/src/main/java/com/ouriques/redis/parser/ProductParser.java
+/home/eduardo-ouriques/Documents/git_repository/nosql/redis/src/main/java/com/ouriques/redis/controller/CartController.java
